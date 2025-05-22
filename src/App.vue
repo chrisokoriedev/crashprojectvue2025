@@ -1,29 +1,22 @@
-<script>
-export default {
-  data() {
-    return {
-      name: 'chris',
-      status: 'pending',
-      tasks: ['task1', 'task2', 'task3'],
-      link: 'https://www.google.com'
-    }
-  },
-  methods: {
-    toggleBut() {
-      // short hand for if else
-      // this.status = this.status === 'active' ? 'inactive' : 'active';
-      if (this.status === 'pending') {
-        this.status = 'active';
-      } else if (this.status === 'active') {
-        this.status = 'inactive';
-      } else {
-        this.status = 'pending';
-      }
-    }
-  },
-}
+<script setup>
+import { ref } from 'vue';
+
+const name = ref('chris');
+const status = ref('active');
+const tasks = ref(['task1', 'task2', 'task3']);
+const toggleBut = () => {
+  // short hand for if else
+  // this.status = this.status === 'active' ? 'inactive' : 'active';
+  if (status.value === 'pending') {
+    status.value = 'active';
+  } else if (status.value === 'active') {
+    status.value = 'inactive';
+  } else {
+    status.value = 'pending';
+  }
+};
 </script>
-<template cl>
+<template>
   <h1> hello {{ name }}</h1>
   <p v-if="status == 'active'">user is active</p>
   <p v-else-if="status == 'pending'">user is pending</p>
@@ -33,20 +26,7 @@ export default {
   <ul>
     <li v-for="task in tasks" :key="task">{{ task }}</li>
   </ul>
-
-  <a v-bind:href="link">visit google </a>
-  <!-- shorthand -->
-  <a :href="link">visit google </a>
-
   <!-- button -->
   <br>
-  <button v-on:click="toggleBut">toggle status</button>
-  <!-- shorthand  for button-->
   <button @click="toggleBut">toggle status</button>
 </template>
-
-<style scoped>
-template {
-  background-color: red;
-}
-</style>
