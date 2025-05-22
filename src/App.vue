@@ -8,6 +8,11 @@ export default {
       link: 'https://www.google.com'
     }
   },
+  methods: {
+    toggleBut() {
+      this.status = this.status === 'active' ? 'inactive' : 'active';
+    }
+  },
 }
 </script>
 <template>
@@ -24,4 +29,7 @@ export default {
   <a v-bind:href="link">visit google </a>
   <!-- shorthand -->
   <a :href="link">visit google </a>
+
+  <!-- button -->
+   <button v-on:click="toggleBut">toggle status</button>
 </template>
