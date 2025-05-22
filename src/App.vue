@@ -4,6 +4,8 @@ export default {
     return {
       name: 'chris',
       status: 'pending',
+      tasks:['task1', 'task2', 'task3'],
+      link: 'https://www.google.com'
     }
   },
 }
@@ -13,4 +15,8 @@ export default {
   <p v-if="status=='active'">user is active</p>
   <p v-else-if="status=='pending'">user is pending</p>
   <p v-else="status">user is inactive</p>
+ <h3>Tasks</h3>
+  <ul>
+    <li v-for="task in tasks" :key="task">{{ task }}</li>
+  </ul>
 </template>
