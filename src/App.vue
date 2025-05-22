@@ -10,7 +10,7 @@ export default {
   },
   methods: {
     toggleBut() {
-      this.status = this.status === 'active' ? 'inactive' : 'active';
+      this.status   = this.status === 'active' ? 'inactive' : 'active';
     }
   },
 }
