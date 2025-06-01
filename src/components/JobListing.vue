@@ -3,7 +3,9 @@ import jobData from '@/jobs.json';
 import { ref } from 'vue';
 import SingleJobListiing from './SingleJobListiing.vue';
 const jobs = ref(jobData.jobs);
-console.log(jobs.value);
+defineProps({
+    limit: Number,
+});
 </script>
 <template>
     <section class="bg-blue-50 px-4 py-10">
@@ -12,7 +14,7 @@ console.log(jobs.value);
                 Browse Jobs
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center">
-                <SingleJobListiing v-for="job in jobs.slice(0, 6)" :key="job.id" :job="job" />
+                <SingleJobListiing v-for="job in jobs.slice(0, limit || jobs.length)" :key="job.id" :job="job" />
             </div>
         </div>
     </section>
