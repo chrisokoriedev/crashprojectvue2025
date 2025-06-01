@@ -21,7 +21,6 @@
 </template>
 
 <script setup>
-// No router dependencies needed for now
 </script>
 
 
