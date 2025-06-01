@@ -13,7 +13,7 @@
       <router-link to="/jobs" class="px-4 py-2 rounded hover:bg-green-600 transition">
         Jobs
       </router-link>
-      <router-link to="/add-job" class="px-4 py-2 rounded hover:bg-green-600 transition">
+      <router-link to="/addjob" class="px-4 py-2 rounded hover:bg-green-600 transition">
         Add Job
       </router-link>
     </div>
