@@ -1,13 +1,12 @@
 <script setup>
+import Footer from './components/Footer.vue';
 import Navbar from './components/Navbar.vue';
-import Hero from './components/Hero.vue';
-import HomeCards from './components/HomeCards.vue';
-import JobListing from './components/JobListing.vue';
+import Home from './views/Home.vue';
+
 </script>
 
 <template>
     <Navbar />
-    <Hero />
-    <HomeCards />
-    <JobListing limit="3" :show-button="true" />
+    <Home />
+    <Footer />
 </template>
