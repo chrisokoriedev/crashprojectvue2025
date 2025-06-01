@@ -1,16 +1,20 @@
 <script setup>
-const year = date.getFullYear();
+defineProps({
+    year: Number
+});
 </script>
 
 <template>
     <footer>
-        <div class="container mx-auto py-6 text-center">
-            <p class="text-gray-600">© {{ year }} Your Company Name. All rights reserved.</p>
-            <p class="text-gray-600">Follow us on
-                <a href="https://twitter.com" class="text-blue-500 hover:underline">Twitter</a>,
-                <a href="https://facebook.com" class="text-blue-500 hover:underline">Facebook</a>,
-                <a href="https://instagram.com" class="text-blue-500 hover:underline">Instagram</a>.
-            </p>
+        <div class="container-lg bg-green-600 text-white mx-auto py-6 text-center">
+            <div class="flex flex-row space-x-4 m-3 justify-between">
+                <div>© {{ year }} Your Company Name. All rights reserved.</div>
+                <div class="flex  space-x-5">
+                    <a href="https://twitter.com" class=" pi pi-twitter"></a>
+                    <a href="https://facebook.com" class=" pi pi-facebook"></a>
+                    <a href="https://instagram.com" class=" pi pi-instagram"></a>
+                </div>
+            </div>
         </div>
     </footer>
 </template>
