@@ -1,6 +1,7 @@
 <script setup>
 import jobData from '@/jobs.json';
 import { ref } from 'vue';
+import SingleJobListiing from './SingleJobListiing.vue';
 const jobs = ref(jobData.jobs);
 console.log(jobs.value);
 </script>
@@ -12,10 +13,10 @@ console.log(jobs.value);
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center">
                 <div v-for="job in jobs.slice(0, 6)" :key="job.id">
-                    {{ job.title }}
+                    <SingleJobListiing />
                 </div>
             </div>
         </div>
     </section>
 
-</template> 
+</template>
