@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-green-700 text-white p-4 shadow flex items-center justify-between">
+  <nav class="bg-green-700 text-white p-4 shadow flex items-center justify-around">
     <!-- Logo -->
     <div class="flex items-center space-x-3">
       <span class="text-xl font-bold">Vue Jobs</span>

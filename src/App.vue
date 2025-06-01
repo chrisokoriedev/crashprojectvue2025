@@ -1,8 +1,9 @@
 <script setup>
 import Navbar from '@/components/Navbar.vue';
+import Hero from '@/components/Hero.vue';
 </script>
 
 <template>
-  <Navbar />
-  <h1>hey man</h1>
+    <Navbar />
+    <Hero />
 </template>
