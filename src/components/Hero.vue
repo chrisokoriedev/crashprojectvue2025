@@ -21,6 +21,13 @@ defineProps({
                 <p class="my-4 text-xl text-white">
                     {{ subtitle }}
                 </p>
+
+
+            </div>
+            <div class="max-w-md mx-auto my-6">
+                <input type="text" placeholder="Search jobs..."
+                    class="w-full px-4 py-2 bg-white border border-green-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                    v-model="searchQuery" />
             </div>
         </div>
     </section>
