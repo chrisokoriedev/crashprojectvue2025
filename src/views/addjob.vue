@@ -1,4 +1,4 @@
-<script scoped></script>
+<script setup></script>
 
 <template>
     <h2>Add Job</h2>

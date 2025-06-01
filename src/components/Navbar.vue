@@ -1,3 +1,8 @@
+<script setup>
+const isActive = (routeName) => {
+  return route.name === routeName;
+};
+</script>
 <template>
   <nav class="bg-green-700 text-white p-4 shadow flex items-center justify-around">
     <!-- Logo -->
@@ -7,13 +12,13 @@
 
     <!-- Navigation Links -->
     <div class="flex space-x-6 text-sm font-medium">
-      <router-link to="/" class="px-4 py-2 rounded hover:bg-green-600 transition">
+      <router-link to="/" class="px-4 py-2 rounded hover:bg-gray-600 transition">
         Home
       </router-link>
-      <router-link to="/jobs" class="px-4 py-2 rounded hover:bg-green-600 transition">
+      <router-link to="/jobs" class="px-4 py-2 rounded hover:bg-gray-600 transition">
         Jobs
       </router-link>
-      <router-link to="/addjob" class="px-4 py-2 rounded hover:bg-green-600 transition">
+      <router-link to="/addjob" class="px-4 py-2 rounded hover:bg-gray-600 transition">
         Add Job
       </router-link>
     </div>
@@ -22,5 +27,3 @@
 
 <script setup>
 </script>
-
-
