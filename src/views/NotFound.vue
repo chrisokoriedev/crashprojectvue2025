@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen flex flex-col justify-center items-center text-center">
-    <i class="pi pi-link text-2xl text-green-600"></i>
-    <h1 class=" text-2xl font-bold text-green-600 mb-4">404</h1>
+    <i class="pi pi-exclamation-triangle text-7xl mb-3 text-green-600"></i>
+    <h1 class=" text-5xl font-bold text-green-600 mb-4">404</h1>
     <p class=" text-5xl font-bold">Oops! Page not found.</p>
     <div class="mt-10 flex items-center justify-center gap-x-6">
       <RouterLink to="/"
